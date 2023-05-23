@@ -22,8 +22,8 @@ app.get("/", async (req, res) => {
 })
 
 app.get("/request", async (req, res) => {
-    const {tema} = req.query
-    fetchAPI(`Mande séries sobre o tema: ${tema}`)
+    const {genero} = req.query
+    fetchAPI(`Mande séries sobre o tema: ${genero}`)
         .then(data => res.render("request.hbs", {data: data.choices[0].message.content}))
    
 })
